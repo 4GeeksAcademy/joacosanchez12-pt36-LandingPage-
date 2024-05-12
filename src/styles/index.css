@@ -10,3 +10,73 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+
+
+body {
+    background: white;
+    margin: 0;
+}
+
+svg {
+    width: 100px;
+    height: 100px;
+    fill: rgb(249, 108, 132);
+    > path {
+        stroke: rgb(104, 4, 69);
+    }
+}
+
+.stop { 
+    width: 30px;
+    height: 30px;
+}
+
+.restart {
+    width: 30px;
+    height: 30px;
+}
+
+.start {
+    width: 30px;
+    height: 30px;
+}
+
+span {
+    background-color: pink;
+    font-size: 30px;
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 10px;
+    border: rgb(104, 4, 69) 5px solid ;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.buttons {
+
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    padding: 20px;
+    
+    & .restartButton {
+        border: none;
+    }
+
+    & .pauseButton {
+        border: none;
+    }
+
+    & .startButton {
+        border: none;
+    }
+}
+
+button:hover {
+    cursor: pointer;
+}
