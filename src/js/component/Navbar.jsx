@@ -4,7 +4,7 @@ const Navbar = () => {
     return (
         <nav class="navbar  bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-                <a class="navbar-brand text-white" href="#">
+                <a class="navbar-brand text-white ms-5" href="#">
                     Start Boostrap
                 </a>
                 <button

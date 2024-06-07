@@ -13,7 +13,7 @@
     --bs-navbar-toggler-icon-bg: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAzMCAzMCc+PHBhdGggc3Ryb2tlPSdyZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNTUpJyBzdHJva2UtbGluZWNhcD0ncm91bmQnIHN0cm9rZS1taXRlcmxpbWl0PScxMCcgc3Ryb2tlLXdpZHRoPScyJyBkPSdNNCA3aDIyTTQgMTVoMjJNNCAyM2gyMicvPjwvc3ZnPg==") !important;
 }
 .navbar-toggler {
-    border: var(--bs-border-width) solid rgb(255 255 255 / 10%) !important;
+    border: var(--bs-border-width) solid rgb(255, 255, 255) !important;
 }
 .navbar-collapse {
     justify-content: flex-end !important;
