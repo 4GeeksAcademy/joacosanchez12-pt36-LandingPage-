@@ -14,7 +14,9 @@
 }
 .navbar-toggler {
     border: var(--bs-border-width) solid rgb(255, 255, 255) !important;
+    color: rgb(171, 171, 1) !important;
 }
+
 .navbar-collapse {
     justify-content: flex-end !important;
 }
