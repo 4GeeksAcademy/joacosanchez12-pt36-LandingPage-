@@ -1,0 +1,17 @@
+.btn-first {
+    background-color: var(--color-dark-primario);
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    height: 46px;
+    color: var(--color-texto-fondo-oscuro);
+}
+
+.btn-first:hover {
+    background-color: var(--color-acento);
+    color: var(--color-texto-fondo-oscuro);
+}
+
+.btn-first:hover .icon-container {
+    filter: brightness(0) invert(1);
+}

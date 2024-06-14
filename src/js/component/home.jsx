@@ -1,26 +1,28 @@
-import React from "react";
-
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+import React from "react"; // Importar react
+import BotonBusqueda from "./searchProduct";
+import NavBar from "./navbar/navBar";
+import Hero from "./Hero/hero";
+import ProductCard from "./Cards/productCard";
+import Footer from "./footer";
+import { obtenerAnoActual } from "../../utils/fechas";
 
 //create your first component
-const Home = () => {
+
+
+//props
+
+
+const Home = ({ appName, logoUrl }) => {
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
+		<>
+			<NavBar appName={appName} logoUrl={logoUrl} />
+			<Hero title="reflexiona sobre grandes ideas" subtitle="Ya seas un filósofo experimentado o un curioso novato, nuestra colección te invita a embarcarte en un viaje a través de los pensamientos e ideas que han dado forma a la humanidad" />
+			<div className="p-4">
+				<ProductCard />
+			</div>
+			<Footer appName={appName} year={obtenerAnoActual} />
+		</>
 	);
 };
 
-export default Home;
+export default Home; 
