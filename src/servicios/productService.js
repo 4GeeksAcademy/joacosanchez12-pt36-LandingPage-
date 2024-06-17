@@ -3,7 +3,6 @@ import productos from "./fakeData/productos";
 
 class ProductService {
     getAllProducts() {
-        // Utilizando spread operator para crear nuevos objetos del modelo de producto
         return productos.map(product => new Product(product));
     }
 
