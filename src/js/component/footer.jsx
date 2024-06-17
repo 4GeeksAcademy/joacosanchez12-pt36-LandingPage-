@@ -8,7 +8,7 @@ const Footer = ({ appName, year }) => {
                 {appName}
             </div>
             <div>
-                | {year()}
+                <span className="me-3">|</span>{year()}
             </div>
         </div>
     )
