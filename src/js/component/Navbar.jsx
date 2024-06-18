@@ -1,0 +1,45 @@
+import React from "react";
+
+const Navbar = () => {
+    return (
+        <nav class="navbar  bg-dark border-bottom border-body navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white ms-5" href="#">
+                    Start Boostrap
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup"
+                    aria-controls="navbarNavAltMarkup"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a
+                            class="nav-link active text-white"
+                            aria-current="page"
+                            href="#"
+                        >
+                            Home
+                        </a>
+                        <a class="nav-link text-white-50" href="#">
+                            About
+                        </a>
+                        <a class="nav-link text-white-50" href="#">
+                            Services
+                        </a>
+                        <a class="nav-link text-white-50" href="#">
+                            Contact
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    );
+};
+export default Navbar;
