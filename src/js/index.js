@@ -1,17 +1,15 @@
 //import react into the bundle
 import React from "react";
-import { createRoot } from "react-dom/client";
-import { appName, logoUrl } from "../environment .js";
+import ReactDOM from "react-dom";
 import RouterComponent from "../RouterComponent.jsx";
-
 // include your styles into the webpack bundle
 import "../styles/index.css";
 
 //import your own components
+import Home from "./component/home.jsx";
 //render your react application
-document.addEventListener("DOMContentLoaded", function () {
-    createRoot(<RouterComponent />, document.querySelector("#app"));
-});
+ReactDOM.render(<RouterComponent />, document.querySelector("#app"));
+
 
 //HTML etiqueta
 //<tagname atributo="" style="" class=""></tagName>

@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import ProductService from "../../../servicios/productService";
 import ProductCard from "../../component/Cards/productCard";
+import { useParams } from "react-router";
+import NavBar from "../../component/navbar/navBar";
+import Footer from "../../component/footer";
+import { obtenerAnoActual } from "../../../utils/fechas"
+
 
 const getProductById = async (id) => {
     try {
@@ -12,9 +17,9 @@ const getProductById = async (id) => {
     }
 }
 
-const Product = ({ productId }) => {
+const Product = () => {
     const [product, setProduct] = useState(null);
-
+    let { productId } = useParams();
     useEffect(() => {
         const fetchProduct = async () => {
             try {
@@ -34,11 +39,15 @@ const Product = ({ productId }) => {
 
     return (
         <div>
+            <NavBar />
+
             {product ? (
-                <ProductCard producto={product} />
+                <ProductCard producto={obtenerAnoActual} />
             ) : (
                 <p>Loading...</p>
             )}
+            <Footer year={obtenerAnoActual} />
+
         </div>
     );
 }
