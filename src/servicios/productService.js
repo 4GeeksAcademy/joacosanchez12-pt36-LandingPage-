@@ -1,25 +1,40 @@
-import Product from "../modelos/Product";
-import productos from "./fakeData/productos";
+import { API_BASE_URL } from "../environment ";
 
 class ProductService {
-    getAllProducts() {
-        return productos.map(product => new Product(product));
+    async getAllProducts() { //GET para obtener todos los productos
+        try {
+            const response = await fetch(`${API_BASE_URL}product`);
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error('Error:', error);
+            throw error; // Re-lanza el error para que pueda ser manejado por el llamador si es necesario
+        }
     }
 
-    getProductById(id) {
-        const productData = productos.find(product => product.id === id);
-        return productData ? new Product(productData) : null;
+    async getProductById(id) { //GET para obtener todos los productos por id
+        try {
+            const response = await fetch(`${API_BASE_URL}product/${id}`);
+            const data = await response.json();
+            return data;
+
+        } catch (error) {
+            throw error;
+        }
     }
 
-    createProduct(product) {
+    createProduct(product) { //POST crear un nuevo producto
         throw new Error('Method createProduct() not implemented');
     }
 
-    updateProduct(id, product) {
+    updateProduct(id, product) { // PUT update un producto ya existente  
         throw new Error('Method updateProduct() not implemented');
     }
 
-    deleteProduct(id) {
+    deleteProduct(id) { // DELETE eleminar un producto existente 
         throw new Error('Method deleteProduct() not implemented');
     }
 }

@@ -3,9 +3,8 @@ import Boton from "../Botones/Boton";
 import CartIcon from "../../../img/icons/shopping-cart.svg"
 import ProductService from "../../../servicios/productService"
 
-const producto = ProductService.getProductById(1);
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ producto }) => {
     const [cantidad, setCantidad] = useState("");
     const [error, setError] = useState();
     const [subtotal, setSubtotal] = useState();
@@ -24,7 +23,7 @@ const ProductCard = ({ product }) => {
         } else {
             setError("");
         }
-        setSubtotal(producto.price.value * cantidad);
+        setSubtotal(producto.price * cantidad);
     }
 
     useEffect(manejarCambiodeCantidad, [cantidad])
@@ -33,11 +32,11 @@ const ProductCard = ({ product }) => {
     return (
         <div className="card w-25" style={{ height: "450px", border: "1px solid var(--color-division)" }}>
             <div className="position-relative">
-                <img className="card-img-top" src={producto.images[0]} alt="Card image cap" width="393" height="233" />
+                <img className="card-img-top" src={producto.featured_img} alt="Card image cap" width="393" height="233" />
                 {cantidad && subtotal > 0 && (
-                    <span className="position-absolute  bottom-0 start-0 bg-secondary px-4 py-1">Subtotal €{subtotal.toFixed(2)}</span>
+                    <span className="position-absolute  bottom-0 start-0 bg-secondary px-4 py-1 fw-bold">Subtotal ${subtotal.toFixed(2)}</span>
                 )}
-                <span className="position-absolute  bottom-0 end-0 text-wrap p-2 rounded" style={{ background: "var(--color-primario)" }}>€ {producto.price.value.toFixed(2)}</span>
+                <span className="position-absolute  bottom-0 end-0 text-wrap p-2 rounded" style={{ background: "var(--color-primario)" }}>$ {parseFloat(producto.price).toFixed(2)}</span>
             </div>
             <div className="card-body">
                 <h5 className="card-title fw-bold">{producto.name}</h5>
