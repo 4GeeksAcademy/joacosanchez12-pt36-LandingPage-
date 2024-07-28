@@ -13,4 +13,6 @@ const Card = ({ title, text }) => {
   );
 };
 
+console.log(Card)
+
 export default Card;
