@@ -57,12 +57,18 @@
 		]
 	},
 	"dependencies": {
+<<<<<<< HEAD
 		"@popperjs/core": "^2.11.8",
 		"bootstrap": "^5.3.3",
 		"prop-types": "^15.7.2",
 		"query-string": "^7.0.1",
 		"react": "^18.3.1",
 		"react-bootstrap": "^2.10.4",
+=======
+		"prop-types": "^15.7.2",
+		"query-string": "^7.0.1",
+		"react": "^18.3.1",
+>>>>>>> be7796dfb53de5c9fe58c3ab4d2c78c010eba5c2
 		"react-dom": "^18.3.1",
 		"react-polyfills": "0.0.1",
 		"react-router": "^6.0.2"
